@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "Первое задание\n";
+	double r1 = 2, r2 = 4, r3 = 8;
+	double r0;
+	double rr0;
+	rr0 = (1 / r1) + (1 / r2) + (1 / r3);
+	r0 = 1 / rr0;
+	cout << "R0 = " << r0 << endl;
+	cout << "Второе задание\n";
+
+	double L, S, pi=3.14;
+	cout << "введите длину окружности ";
+	cin >> L;
+	S = (L * L) / (4 * pi);
+	cout << S << " площадь\n\n" ;
+	
+	cout << "3 задание\n";
+	double v, s, t, a;
+	cout << "введите скорость ";
+	cin >> v;
+	cout << "введите время ";
+	cin >> t;
+	cout << "введите ускорение ";
+	cin >> a;
+	s = (v*t) + ((a*(t*t))/2);
+	cout << s << " путь\n";
+
+	cout << "\n\n\nВторое дз\nпервое задание\n";
+	int sec, hours, mins;
+	cout << "введите секунды ";
+	cin >> sec;
+	hours = sec / 60 / 60;
+	mins = sec / 60;
+	cout << hours << " часы " << mins << " минуты " << sec << " секунды";
+	cout << "\n\n\n";
+	cout << "задание 2\n\n";
+	cout << "введите сумму денег ";
+	double summadeneg;
+	cin >> summadeneg;
+	int summa_celihdeneg;
+	double summa_kopeechek;
+	summa_celihdeneg = summadeneg;
+	summa_kopeechek = (summadeneg-summa_celihdeneg) * 100;
+	cout << summa_celihdeneg << " рублей " << summa_kopeechek << " копеек\n\n\n";
+	cout << "задание 3\n\n";
+	cout << "Вычисление скорости бега\n";
+	cout << "Введите длину дистанции (метров) = ";
+	double dist, time1;
+	cin >> dist;
+	cout << "Введите время (мин.сек) = ";
+	cin >> time1;
+	cout << "Дистанция: " << dist << "м.\n";
+	int secs, mins1;
+	mins = time1;
+	secs = (time1 - mins) * 100;
+	double sec1 = mins * 60 + secs;
+	cout << "Время: " << mins << " мин " << secs << "сек = " << sec1;
+	cout << "\nВы бежали со скоростью: " << dist / sec1 * 3.6 << "км/ч\n\n\n";
+	cout << "задание 4\n";
+	double price_min, price_sec, time, time_sec, price_all;
+	cout << "Введите цену минуты исходящего звонка другому оператору\n";
+	cin >> price_min;
+	cout << "Введите продолжительность разговора в минутах и секундах\n";
+	cin >> time;
+	time_sec = ((int)time * 60) + ((time * 100) - (int)time * 100);
+	price_sec = price_min / 60;
+	price_all = time_sec * price_sec;
+	cout << "Стоимость звонка составила: " << price_all;
+	cout << "\n\n\nзадание 5";
+	int days, day, weeks;
+	cout << "\nвведите количество дней";
+	cin >> day;
+	weeks = day / 7;
+	days = day - (weeks * 7);
+	cout << weeks << " недель " << days << " дней";
+	return 0;
+}
